@@ -1,0 +1,59 @@
+/* #bg {
+    position: fixed; 
+    top: 10px; 
+    left: 10px;
+    right: 10px; 
+    bottom: 10px;
+      
+    min-width: 100%;
+    min-height: 50%;
+  } */
+  .image{
+    height:40em; 
+    background-size:cover;
+    width:auto;
+    background-image:url('/assets/img/earth-theme.jpg');
+    background-position:50% 50%;
+  }
+.heading{
+    text-align: center;
+	font-weight: 300;
+	margin-bottom: 30px;
+	font-size: 44px;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+}
+
+.heading #bold-heading{
+    font-weight: bold;
+    color:  rgba(0, 0, 0, 0.699);
+    /* #008CBA BLUE */
+}
+::ng-deep  .mat-tab-label-content {
+    width: 85px;
+    height: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    align-self: center;
+    letter-spacing: normal;
+    color:white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color: rgb(243, 139, 101);
+    height: 4px;
+    width: 8px;
+}
+
+
+::ng-deep  .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-link:not(.mat-tab-disabled):focus,
+.mat-tab-group.mat-primary .mat-tab-label-active {
+  color:white;
+    
+}
