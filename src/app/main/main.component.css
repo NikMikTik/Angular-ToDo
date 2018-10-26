@@ -9,51 +9,144 @@
     min-height: 50%;
   } */
   .image{
-    height:40em; 
-    background-size:cover;
+    background-size:auto   ;
     width:auto;
-    background-image:url('/assets/img/earth-theme.jpg');
+    background-image:url('/assets/img/notes.jpg');
     background-position:50% 50%;
-  }
+    background-blend-mode: lighten;
+    height: 100%; 
+    background-attachment: initial;
+  
+}
+/* .bbody{
+    background-image:url('/assets/img/notes.jpg');
+    background-size:cover   ;
+} */
 .heading{
     text-align: center;
 	font-weight: 300;
 	margin-bottom: 30px;
 	font-size: 44px;
     font-family: 'Roboto', sans-serif;
-    color:white;
+    color:black;
 }
 
 .heading #bold-heading{
     font-weight: bold;
-    color:  rgba(0, 0, 0, 0.699);
+    color:  #008CBA
     /* #008CBA BLUE */
 }
-::ng-deep  .mat-tab-label-content {
-    width: 85px;
-    height: 64px;
+::ng-deep .tab-two .mat-tab-label-content {
+    /* width: 85px; */
+    /* height: 64px; */
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     align-self: center;
     letter-spacing: normal;
-    color:white;
+    color:black;
+    /* color:#4CAF50;  GREEN*/
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
-    background-color: rgb(243, 139, 101);
+
+  ::ng-deep .tab-two .mat-tab-body-content{
+width: auto;  
+height: auto;
+overflow-x: hidden;
+overflow-y: hidden;
+
+}
+  ::ng-deep  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color: #008CBA;
+    /* background-color: rgb(243, 139, 101); */
     height: 4px;
-    width: 8px;
+    /* width: 8px; */
 }
 
 
-::ng-deep  .mat-tab-label:not(.mat-tab-disabled):focus,
+::ng-deep .tab-two .mat-tab-label:not(.mat-tab-disabled):focus,
 .mat-tab-link:not(.mat-tab-disabled):focus,
 .mat-tab-group.mat-primary .mat-tab-label-active {
   color:white;
+        background-color: rgb(233, 205, 179);
+
+}
+
+
+
+::ng-deep .tab-one .mat-tab-label{
+    background-color: rgb(233, 205, 179);
     
 }
+::ng-deep .tab-one .mat-tab-label-content {
+    /* width: 85px; */
+    /* height: 64px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    align-self: center;
+    letter-spacing: normal;
+    color:black;
+    /* color:#4CAF50;  GREEN*/
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+  }
+
+  /* ::ng-deep .tab-one .mat-tab-body-content{
+width: 500px;  
+
+} */
+  ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color: #008CBA;
+    /* background-color: rgb(243, 139, 101); */
+    height: 4px;
+    /* width: 8px; */
+}
+
+
+::ng-deep .tab-one .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-link:not(.mat-tab-disabled):focus,
+.mat-tab-group.mat-primary .mat-tab-label-active {
+  color:white;
+  background-color: rgb(236, 201, 170);
+    
+}
+
+
+
+
+
+.mat-card{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px dashed #4CAF50;
+    /* background-color: rgb(228, 213, 198); */
+    background-color: white 
+    
+}
+.mat-mini-fab{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    z-index: 99999;
+    
+    /* backface-visibility: visible; */
+    bottom: 20px;
+    right: 40px; }
+
+    .mat-icon{
+        font-size: 25px;
+      
+    }

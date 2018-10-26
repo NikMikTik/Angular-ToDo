@@ -1,0 +1,76 @@
+<div class="dialog-css">
+    <h2 mat-dialog-title></h2>
+
+    <form (ngSubmit)="save(editForm)" [formGroup]="editForm">
+    <!-- <mat-dialog-content > -->
+         <mat-form-field>
+            <mat-select  [(ngModel)]="cN" placeholder=" Select Catgory" [disabled]="true" formControlName="categoryName">
+                <div class="alert alert-danger" *ngIf=" categoryName?.touched && categoryName.invalid">
+                    <div *ngIf="categoryName.errors.required">
+                            Category Name is
+                        <strong>required</strong>
+                    </div>
+                </div>
+                <mat-option  *ngFor="let category of categoryNameList" [value]="category.categoryName">
+                    {{category.categoryName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> 
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label class="label">Topic</mat-label>
+            <input matInput [(ngModel)]="topic" placeholder="Enter Topic for your Event" formControlName="topic">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+            <textarea matInput  [(ngModel)]="summary" placeholder="Summary" formControlName="summary">
+        </textarea>
+        </mat-form-field>
+
+
+        <!-- <mat-form-field appearance="outline">
+          <mat-label class="label">Summary</mat-label>
+          <input matInput  placeholder="Enter Summary for your Event" formControlName="summary">
+        </mat-form-field> -->
+
+        <!-- <mat-form-field appearance="outline">
+            <mat-label class="label">Topic</mat-label>
+            <input matInput  placeholder="Enter Topic for your Event">
+          </mat-form-field> -->
+
+        <br>
+        <mat-form-field>
+            <mat-select [(ngModel)]="importance" placeholder="Select Importance" formControlName="importance">
+                <mat-option  value="Critical">
+                    Critical</mat-option>
+                <mat-option value="Major">
+                    Major</mat-option>
+                <mat-option value="Minor">
+                    Minor</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input [(ngModel)]="eventDateTime" matInput [matDatepicker]="myDatepicker" formControlName="eventDateTime">
+            <mat-datepicker-toggle matSuffix [for]="myDatepicker">
+            </mat-datepicker-toggle>
+            <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+
+
+<br>
+    <!-- </mat-dialog-content> -->
+
+    <!-- <mat-dialog-actions class="dialog-button"> -->
+        <button class="mat-raised-button" (click)="close()">Close</button>
+        <!-- <button class="mat-raised-button mat-primary" (click)="save()" >Save</button> -->
+        <button class="mat-raised-button mat-primary"
+        [disabled]="editForm.invalid" type="submit">
+      Save
+        </button>
+    <!-- </mat-dialog-actions> -->
+
+    <br>
+</form>
+</div>  

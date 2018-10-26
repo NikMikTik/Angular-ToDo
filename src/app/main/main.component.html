@@ -1,15 +1,22 @@
-<!-- <img id="bg" src="assets/img/earth-theme.jpg" > -->
+<div ><button  [disabled]="buttondisable" mat-mini-fab mat-raised-button (click)="openDialog()" >
+    <mat-icon>add</mat-icon>   
+     </button>
+
+    </div>
 <div class="image">
   <div class="heading">
-    <br>
-      Welcome to<span id="bold-heading"> ToDo List...</span> <br>
+     
+      
+    <mat-card>
+     <span id="bold-heading"> ToDo List </span>Application...    </mat-card>
+      
     </div>
 
-    <mat-tab-group>
-      <mat-tab label="All"> <app-all-list></app-all-list> </mat-tab>
-      <mat-tab label="Ball"> <app-all-list></app-all-list> </mat-tab>
+    <mat-tab-group class="tab-one" >
+        <mat-tab label="All"> <app-all-list></app-all-list> </mat-tab>
+        
+      <mat-tab *ngFor="let category of categoryNameList" [label]="category.categoryName"> </mat-tab>
     </mat-tab-group>
 
-
-
+   
 </div>

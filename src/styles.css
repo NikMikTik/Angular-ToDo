@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-sort-header-arrow {
+    color: rgb(199, 191, 191) !important;
+    opacity: 1 !important;
+    }
+
+    .mat-sort-header-arrow:hover{
+        color:white !important;
+        opacity: 1 !important;
+        }
+    
+    
+        /* ::ng-deep snack-bar-container.custom-class {
+            background: orangered;
+            color :black;
+          } */
+          
+          .orange-snackbar {
+            background: orangered;
+            /* font-weight: bolder; */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: black;
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+          }
