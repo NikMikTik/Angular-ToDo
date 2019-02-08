@@ -12,9 +12,10 @@ import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
   styleUrls: ['./all-list.component.css']
 })
 export class AllListComponent implements OnInit {
-  displayedColumns: string[] = ['topic', 'eventDateTime', 'completedDateTime', 'createdDateTime', 'summary', 'importance', 'status', 'edit', 'delete'];
+  displayedColumns: string[] = ['topic', 'eventDateTime', 'completedDateTime', 'createdDateTime', 'summary', 'importance', 'status', 'edit', 'delete','complete'];
   dataSource = new MatTableDataSource();
   noList: boolean;
+  eventJsonForm;
   dashboardElement: EventTable[] = [];
   reloadOption: boolean = false;
 
@@ -88,4 +89,29 @@ export class AllListComponent implements OnInit {
 
 
   }
+
+
+  complete(val)
+{console.log("qweqqwq"+val);
+this.eventJsonForm={ eventId:val}
+  this.dataService.completeEvent(this.eventJsonForm).subscribe((result) => {
+    console.log(result['code']);
+    let config = new MatSnackBarConfig();
+    config.duration = 5000;
+    config.panelClass = ['orange-snackbar']
+    if (result['code'] === 200) {
+      this.snackBar.open("Event Completed ...!", "", config);
+      window.location.reload();
+    }
+
+  }
+    ,
+    (error: Response) => {
+      if (error)
+        alert('An Unexpected Error has Occured... ' + error);
+      else {
+        throw error;
+      }
+    });
+}
 }

@@ -37,7 +37,8 @@ import {
   MAT_DATE_LOCALE,
   MAT_DATE_FORMATS,
   DateAdapter,
-  MatTableModule
+  MatTableModule,
+  MatTooltipModule
 } from '@angular/material';
 
 

@@ -94,13 +94,14 @@ export class EditEventComponent implements OnInit {
       if(result['code']===200)
       {
         this.snackBar.open("Event Edited ...!","", config);
-        window.location.reload();
+        // window.location.reload();
         
       }
     })
   }
 
   close() {
+    console.log("in hehrhthkjreh");
     this.dialogRef.close();
   }
   onNoClick(): void {

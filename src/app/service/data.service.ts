@@ -52,4 +52,10 @@ edEvent(editForm){
    return this.httpClient.put('http://localhost:8090/event/edit',JSON.stringify(editForm),{headers: headers});
  
 }
+
+completeEvent(eventId){
+const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+
+ return this.httpClient.post('http://localhost:8090/event/completed',JSON.stringify(eventId),{headers: headers});
+}
 }

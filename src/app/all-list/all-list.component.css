@@ -173,6 +173,16 @@ input::placeholder {
     outline:none;
     color:crimson;
   }
+
+  .check{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:navy;  
+  }
    .ed{
     background-color: Transparent;
     background-repeat:no-repeat;
